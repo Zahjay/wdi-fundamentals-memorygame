@@ -25,7 +25,7 @@ function createCards() {
  }
 
 function isTwoCards(){
- 	//cardsInPlay.push(this.getAttribute('data-card'));
+ 	// cardsInPlay.push(this.getAttribute('data-card'));
  	cardsInPlay.push(this);
  	if(this.getAttribute("data-card") === "queen"){
  		this.innerHTML = '<img src="images/queenForGame.jpg" alt="Queen Picture">';
@@ -43,7 +43,7 @@ function isTwoCards(){
 function isMatch(cardsInPlay){
 	console.log(cardsInPlay);
 
-	if (cardsInPlay[0] === cardsInPlay[1]){
+	if (cardsInPlay[0].getAttribute("data-card") === cardsInPlay[1].getAttribute("data-card")){
 		alert("You’ve found a match!");
  	}
  	 else {
